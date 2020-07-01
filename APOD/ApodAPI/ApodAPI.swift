@@ -27,6 +27,7 @@ class ApodAPI {
         static let apiKeyParam = "?api_key=\(ApodAPI.apiKey)"
 
         case getApod(String?)
+        case getApodListByDates(String, String)
 
         var stringURL: String {
             switch self {
@@ -34,6 +35,8 @@ class ApodAPI {
                 var finalURL = "\(Endpoints.base)\(Endpoints.apiKeyParam)"
                 if let date = optionalDate { finalURL.append(contentsOf: "&date=\(date)") }
                 return finalURL
+            case .getApodListByDates(let startDate, let endDate):
+                return "\(Endpoints.base)\(Endpoints.apiKeyParam)&start_date=\(startDate)&end_date=\(endDate)"
             }
         }
 
