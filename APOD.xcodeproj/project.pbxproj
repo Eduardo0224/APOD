@@ -13,6 +13,7 @@
 		A01EA3A224AD07CD00394A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01EA3A024AD07CD00394A6E /* Main.storyboard */; };
 		A01EA3A424AD07D100394A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01EA3A324AD07D100394A6E /* Assets.xcassets */; };
 		A01EA3A724AD07D100394A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01EA3A524AD07D100394A6E /* LaunchScreen.storyboard */; };
+		A01EA3B024AD1A8700394A6E /* ApodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EA3AF24AD1A8700394A6E /* ApodAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A01EA3A324AD07D100394A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01EA3A624AD07D100394A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01EA3A824AD07D100394A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01EA3AF24AD1A8700394A6E /* ApodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A01EA39924AD07CD00394A6E /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				A01EA3AE24AD1A6900394A6E /* ApodAPI */,
 				A01EA39A24AD07CD00394A6E /* AppDelegate.swift */,
 				A01EA39C24AD07CD00394A6E /* SceneDelegate.swift */,
 				A01EA39E24AD07CD00394A6E /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				A01EA3A824AD07D100394A6E /* Info.plist */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		A01EA3AE24AD1A6900394A6E /* ApodAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A01EA3AF24AD1A8700394A6E /* ApodAPI.swift */,
+			);
+			path = ApodAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				A01EA39F24AD07CD00394A6E /* ViewController.swift in Sources */,
 				A01EA39B24AD07CD00394A6E /* AppDelegate.swift in Sources */,
+				A01EA3B024AD1A8700394A6E /* ApodAPI.swift in Sources */,
 				A01EA39D24AD07CD00394A6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
