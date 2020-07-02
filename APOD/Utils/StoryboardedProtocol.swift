@@ -11,6 +11,7 @@ import UIKit
 // MARK: - Enums
 enum StoryboardName: String {
     case apodList = "ApodList"
+    case apodDetail = "ApodDetail"
 }
 
 // MARK: - Protocol

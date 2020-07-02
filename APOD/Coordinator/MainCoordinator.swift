@@ -25,8 +25,10 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(apodListViewController, animated: true)
     }
 
-    func presentDetail(of: Apod) {
-
+    func presentDetail(of apod: Apod) {
+        let apodDetailViewController = ApodDetailViewController.instantiate(from: .apodDetail)
+        apodDetailViewController.initiate(with: [self, apod])
+        navigationController.pushViewController(apodDetailViewController, animated: true)
     }
 
 

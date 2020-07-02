@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Apod Detail View Controller-->
+        <scene sceneID="l9N-0G-uvX">
+            <objects>
+                <viewController storyboardIdentifier="ApodDetailViewController" id="Vaa-4t-fYw" customClass="ApodDetailViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RKN-On-G07" userLabel="Root View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="P0B-r8-SPJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynq-Mx-lrk" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="501.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="05h-Xs-Hvh" userLabel="Root Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="501.33333333333331"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-Pd-5Rx" userLabel="Media View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfU-jf-LNo" userLabel="APOD Image View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zl-SY-YW0" userLabel="Video Player View" customClass="YTPlayerView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="tfU-jf-LNo" firstAttribute="centerX" secondItem="gfD-Pd-5Rx" secondAttribute="centerX" id="1cg-Ld-hYc"/>
+                                                            <constraint firstItem="8zl-SY-YW0" firstAttribute="centerY" secondItem="gfD-Pd-5Rx" secondAttribute="centerY" id="5S8-uw-f5U"/>
+                                                            <constraint firstItem="tfU-jf-LNo" firstAttribute="centerY" secondItem="gfD-Pd-5Rx" secondAttribute="centerY" id="6td-Kl-yCA"/>
+                                                            <constraint firstItem="8zl-SY-YW0" firstAttribute="height" secondItem="gfD-Pd-5Rx" secondAttribute="height" id="8sM-Qw-aY9"/>
+                                                            <constraint firstItem="tfU-jf-LNo" firstAttribute="height" secondItem="gfD-Pd-5Rx" secondAttribute="height" id="BMF-dT-aNl"/>
+                                                            <constraint firstItem="8zl-SY-YW0" firstAttribute="centerX" secondItem="gfD-Pd-5Rx" secondAttribute="centerX" id="Cse-SR-pwa"/>
+                                                            <constraint firstItem="tfU-jf-LNo" firstAttribute="width" secondItem="gfD-Pd-5Rx" secondAttribute="width" id="G4g-7a-Nv0"/>
+                                                            <constraint firstItem="8zl-SY-YW0" firstAttribute="width" secondItem="gfD-Pd-5Rx" secondAttribute="width" id="O3a-Ve-NeY"/>
+                                                            <constraint firstAttribute="height" constant="350" id="SdB-yC-vMz"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sGQ-3Z-dXX" userLabel="Labels Stack View">
+                                                        <rect key="frame" x="0.0" y="350" width="375" height="151.33333333333337"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-3B-dUg" userLabel="Title Label">
+                                                                <rect key="frame" x="16" y="16.000000000000004" width="343" height="46.333333333333343"/>
+                                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="33"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="ufx-Ux-Hfy" userLabel="Date Label">
+                                                                <rect key="frame" x="16" y="62.333333333333314" width="343" height="42"/>
+                                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="30"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="L8H-Qe-ZMA" userLabel="Description Label">
+                                                                <rect key="frame" x="16" y="104.33333333333331" width="343" height="31"/>
+                                                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="22"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="05h-Xs-Hvh" firstAttribute="centerX" secondItem="Ynq-Mx-lrk" secondAttribute="centerX" id="I1b-9u-nJN"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="eS0-AI-B41"/>
+                                            <constraint firstItem="05h-Xs-Hvh" firstAttribute="width" secondItem="Ynq-Mx-lrk" secondAttribute="width" id="nRU-Cn-1Ff"/>
+                                            <constraint firstAttribute="bottom" secondItem="05h-Xs-Hvh" secondAttribute="bottom" id="p4x-6x-w83"/>
+                                            <constraint firstItem="05h-Xs-Hvh" firstAttribute="top" secondItem="Ynq-Mx-lrk" secondAttribute="top" id="ypG-Ri-gfW"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="eS0-AI-B41"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ynq-Mx-lrk" secondAttribute="trailing" id="6Vv-N9-FtM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ynq-Mx-lrk" secondAttribute="bottom" id="EbU-O6-1AF"/>
+                                    <constraint firstItem="Ynq-Mx-lrk" firstAttribute="centerX" secondItem="P0B-r8-SPJ" secondAttribute="centerX" id="IpH-Cu-XcQ"/>
+                                    <constraint firstItem="Ynq-Mx-lrk" firstAttribute="leading" secondItem="P0B-r8-SPJ" secondAttribute="leading" id="KTS-0c-HnF"/>
+                                    <constraint firstItem="Ynq-Mx-lrk" firstAttribute="top" secondItem="P0B-r8-SPJ" secondAttribute="top" id="lyf-H1-9cc"/>
+                                    <constraint firstItem="Ynq-Mx-lrk" firstAttribute="width" secondItem="P0B-r8-SPJ" secondAttribute="width" id="uBk-9a-xW2"/>
+                                    <constraint firstItem="Ynq-Mx-lrk" firstAttribute="height" secondItem="P0B-r8-SPJ" secondAttribute="height" priority="250" id="zOs-dl-uQZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2HZ-27-Zve" firstAttribute="trailing" secondItem="P0B-r8-SPJ" secondAttribute="trailing" id="BF7-kn-oP4"/>
+                            <constraint firstItem="P0B-r8-SPJ" firstAttribute="top" secondItem="RKN-On-G07" secondAttribute="top" id="CW5-tf-7Kd"/>
+                            <constraint firstAttribute="bottom" secondItem="P0B-r8-SPJ" secondAttribute="bottom" id="bK8-j6-QCB"/>
+                            <constraint firstItem="P0B-r8-SPJ" firstAttribute="leading" secondItem="2HZ-27-Zve" secondAttribute="leading" id="iGa-RQ-683"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2HZ-27-Zve"/>
+                    </view>
+                    <connections>
+                        <outlet property="apodImageView" destination="tfU-jf-LNo" id="Or7-0Z-hiw"/>
+                        <outlet property="apodVideoView" destination="8zl-SY-YW0" id="JBH-wd-yYe"/>
+                        <outlet property="dateLabel" destination="ufx-Ux-Hfy" id="tji-20-I6d"/>
+                        <outlet property="descriptionLabel" destination="L8H-Qe-ZMA" id="waa-pL-aCY"/>
+                        <outlet property="titleLabel" destination="KeR-3B-dUg" id="dhY-6q-ILN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqf-Zp-kDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+</document>

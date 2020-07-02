@@ -13,10 +13,14 @@ class ApodListViewController: UIViewController, Storyboarded {
 
     // MARK: - @IBOutlets & @IBActions
     @IBOutlet weak private var todayApodImageView: UIImageView!
-
     @IBOutlet weak var todayApodVideoView: YTPlayerView!
     @IBOutlet weak private var todayApodTitleLabel: UILabel!
     @IBOutlet weak private var apodTableView: UITableView!
+
+    @IBAction private func todayApodButtonPressed(_ sender: Any) {
+        guard let apod = viewModel.todayApod else { return }
+        coordinator?.presentDetail(of: apod)
+    }
 
     // MARK: - Properties
     /// ViewModel
@@ -29,7 +33,6 @@ class ApodListViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         configureTableView()
         registerUserTableViewCell()
-        setupNavigationBar()
         getApodList {
             guard let todayApod = self.viewModel.todayApod else { return }
             self.todayApodTitleLabel.text = todayApod.title
@@ -40,6 +43,11 @@ class ApodListViewController: UIViewController, Storyboarded {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+    }    
 
     // MARK: - Custom Functions
     private func configureTableView() {

@@ -34,6 +34,8 @@
 		A01EA3E224AD777000394A6E /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EA3E124AD777000394A6E /* UIViewController+NavigationBar.swift */; };
 		A0DDBAB024AE1B320054F79B /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDBAAF24AE1B320054F79B /* Animator.swift */; };
 		A0DDBAB224AE1BA40054F79B /* UITableView+LastVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDBAB124AE1BA40054F79B /* UITableView+LastVisible.swift */; };
+		A0DDBAB924AE28F00054F79B /* ApodDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DDBAB824AE28F00054F79B /* ApodDetail.storyboard */; };
+		A0DDBABB24AE290C0054F79B /* ApodDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDBABA24AE290C0054F79B /* ApodDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		A01EA3E124AD777000394A6E /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		A0DDBAAF24AE1B320054F79B /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		A0DDBAB124AE1BA40054F79B /* UITableView+LastVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+LastVisible.swift"; sourceTree = "<group>"; };
+		A0DDBAB824AE28F00054F79B /* ApodDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApodDetail.storyboard; sourceTree = "<group>"; };
+		A0DDBABA24AE290C0054F79B /* ApodDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		A01EA3B124AD232B00394A6E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A0DDBAB324AE28B90054F79B /* ApodDetail */,
 				A01EA3B224AD234700394A6E /* ApodList */,
 			);
 			path = Modules;
@@ -206,6 +211,47 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		A0DDBAB324AE28B90054F79B /* ApodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A0DDBAB724AE28DE0054F79B /* Model */,
+				A0DDBAB624AE28D50054F79B /* View */,
+				A0DDBAB524AE28CD0054F79B /* ViewModel */,
+				A0DDBAB424AE28C20054F79B /* Connection */,
+			);
+			path = ApodDetail;
+			sourceTree = "<group>";
+		};
+		A0DDBAB424AE28C20054F79B /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		A0DDBAB524AE28CD0054F79B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A0DDBAB624AE28D50054F79B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0DDBAB824AE28F00054F79B /* ApodDetail.storyboard */,
+				A0DDBABA24AE290C0054F79B /* ApodDetail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0DDBAB724AE28DE0054F79B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C39C2B90887CF3A3100FE13B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01EA3A724AD07D100394A6E /* LaunchScreen.storyboard in Resources */,
+				A0DDBAB924AE28F00054F79B /* ApodDetail.storyboard in Resources */,
 				A01EA3A424AD07D100394A6E /* Assets.xcassets in Resources */,
 				A01EA3BA24AD2CB100394A6E /* ApodList.storyboard in Resources */,
 				A01EA3CF24AD3EDC00394A6E /* ApodTableViewCell.xib in Resources */,
@@ -355,6 +402,7 @@
 				A01EA39B24AD07CD00394A6E /* AppDelegate.swift in Sources */,
 				A01EA3D124AD3FCF00394A6E /* UIView+Bordered.swift in Sources */,
 				A01EA3B824AD250000394A6E /* Apod.swift in Sources */,
+				A0DDBABB24AE290C0054F79B /* ApodDetail.swift in Sources */,
 				A0DDBAB224AE1BA40054F79B /* UITableView+LastVisible.swift in Sources */,
 				A01EA3B024AD1A8700394A6E /* ApodAPI.swift in Sources */,
 				A01EA3E024AD58B100394A6E /* UIImageView+Downloading.swift in Sources */,

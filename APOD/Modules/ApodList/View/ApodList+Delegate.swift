@@ -9,5 +9,7 @@
 import UIKit
 
 extension ApodListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.presentDetail(of: viewModel.apod(indexPath.row))
+    }
 }
