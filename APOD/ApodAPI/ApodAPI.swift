@@ -106,7 +106,7 @@ class ApodAPI {
         callInMainThread { completion(.failure(error)) }
     }
 
-    private class func callInMainThread(_ completion: @escaping () -> Void) {
+    class func callInMainThread(_ completion: @escaping () -> Void) {
         DispatchQueue.main.async {
             completion()
         }

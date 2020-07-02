@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Apod List-->
+        <scene sceneID="j1I-Yh-bNl">
+            <objects>
+                <viewController storyboardIdentifier="ApodListViewController" id="mJ4-Md-Nlh" userLabel="Apod List" customClass="ApodListViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ObL-j3-pXO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kob-f6-Loo" userLabel="Root Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSi-Ll-P6x" userLabel="Header APOD View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40g-XI-2bY" userLabel="APOD Image View">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIH-Qm-BHf" userLabel="Video Player View" customClass="YTPlayerView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzv-71-lsq">
+                                                <rect key="frame" x="325" y="54" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="05O-KI-0zV"/>
+                                                    <constraint firstAttribute="width" secondItem="gzv-71-lsq" secondAttribute="height" multiplier="1:1" id="Wv0-Xs-wv9"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="info.circle.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="40g-XI-2bY" secondAttribute="bottom" id="Rne-tq-uvc"/>
+                                            <constraint firstAttribute="trailing" secondItem="40g-XI-2bY" secondAttribute="trailing" id="T31-Eg-aBo"/>
+                                            <constraint firstItem="40g-XI-2bY" firstAttribute="top" secondItem="wSi-Ll-P6x" secondAttribute="top" id="WIs-91-4gS"/>
+                                            <constraint firstItem="rIH-Qm-BHf" firstAttribute="centerY" secondItem="wSi-Ll-P6x" secondAttribute="centerY" id="aF5-1N-8QL"/>
+                                            <constraint firstItem="rIH-Qm-BHf" firstAttribute="height" secondItem="wSi-Ll-P6x" secondAttribute="height" id="aeo-yH-oun"/>
+                                            <constraint firstAttribute="trailing" secondItem="gzv-71-lsq" secondAttribute="trailing" constant="20" id="c6G-by-4O8"/>
+                                            <constraint firstAttribute="height" constant="250" id="mS7-vN-r6k"/>
+                                            <constraint firstItem="rIH-Qm-BHf" firstAttribute="width" secondItem="wSi-Ll-P6x" secondAttribute="width" id="oH0-aD-Pxd"/>
+                                            <constraint firstItem="rIH-Qm-BHf" firstAttribute="centerX" secondItem="wSi-Ll-P6x" secondAttribute="centerX" id="tcd-OL-FY1"/>
+                                            <constraint firstItem="40g-XI-2bY" firstAttribute="leading" secondItem="wSi-Ll-P6x" secondAttribute="leading" id="yaM-YE-aLW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05I-G7-dpQ" customClass="BorderedView" customModule="APOD" customModuleProvider="target">
+                                        <rect key="frame" x="9.3333333333333428" y="260" width="356.33333333333326" height="86"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xm4-HO-Ppj" userLabel="Labels Stack View">
+                                                <rect key="frame" x="8" y="0.0" width="340.33333333333331" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="4XF-tf-4rx">
+                                                        <rect key="frame" x="8" y="8" width="324.33333333333331" height="42"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="30"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="70k-QX-d4l">
+                                                        <rect key="frame" x="8" y="50" width="324.33333333333331" height="28"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.92897366751269039" green="0.92897366751269039" blue="0.92897366751269039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="Xm4-HO-Ppj" firstAttribute="leading" secondItem="05I-G7-dpQ" secondAttribute="leading" constant="8" id="4r9-UN-3ZB"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xm4-HO-Ppj" secondAttribute="bottom" id="hTe-Lc-Ewm"/>
+                                            <constraint firstItem="Xm4-HO-Ppj" firstAttribute="top" secondItem="05I-G7-dpQ" secondAttribute="top" id="iqr-Ss-0Yj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xm4-HO-Ppj" secondAttribute="trailing" constant="8" id="xB3-cw-Bgg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWitdh">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qxQ-dP-NaM" userLabel="APOD Table View">
+                                        <rect key="frame" x="0.0" y="356" width="375" height="456"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="473" id="s9m-ec-QJV"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="s9m-ec-QJV"/>
+                                            </mask>
+                                        </variation>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qxQ-dP-NaM" firstAttribute="width" secondItem="Kob-f6-Loo" secondAttribute="width" id="UBs-Gs-hdC"/>
+                                    <constraint firstItem="05I-G7-dpQ" firstAttribute="width" secondItem="Kob-f6-Loo" secondAttribute="width" multiplier="0.95" id="p1c-FS-RrD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kob-f6-Loo" firstAttribute="leading" secondItem="sb6-b5-qAy" secondAttribute="leading" id="OjT-MR-wYz"/>
+                            <constraint firstItem="sb6-b5-qAy" firstAttribute="trailing" secondItem="Kob-f6-Loo" secondAttribute="trailing" id="UqA-yw-AJK"/>
+                            <constraint firstItem="Kob-f6-Loo" firstAttribute="top" secondItem="ObL-j3-pXO" secondAttribute="top" id="bXa-kR-zfQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Kob-f6-Loo" secondAttribute="bottom" id="kPe-uI-8pt"/>
+                            <constraint firstItem="gzv-71-lsq" firstAttribute="top" secondItem="sb6-b5-qAy" secondAttribute="top" constant="10" id="vSw-7S-Cby"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sb6-b5-qAy"/>
+                    </view>
+                    <connections>
+                        <outlet property="apodTableView" destination="qxQ-dP-NaM" id="hkm-Tu-Fmc"/>
+                        <outlet property="todayApodImageView" destination="40g-XI-2bY" id="AqA-hm-NbC"/>
+                        <outlet property="todayApodTitleLabel" destination="4XF-tf-4rx" id="AQQ-LH-u6M"/>
+                        <outlet property="todayApodVideoView" destination="rIH-Qm-BHf" id="OF1-LR-eHf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEq-F5-6vX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
