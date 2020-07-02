@@ -32,6 +32,8 @@
 		A01EA3DE24AD493200394A6E /* InjectDependenciesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EA3DD24AD493200394A6E /* InjectDependenciesProtocol.swift */; };
 		A01EA3E024AD58B100394A6E /* UIImageView+Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EA3DF24AD58B100394A6E /* UIImageView+Downloading.swift */; };
 		A01EA3E224AD777000394A6E /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01EA3E124AD777000394A6E /* UIViewController+NavigationBar.swift */; };
+		A0DDBAB024AE1B320054F79B /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDBAAF24AE1B320054F79B /* Animator.swift */; };
+		A0DDBAB224AE1BA40054F79B /* UITableView+LastVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDBAB124AE1BA40054F79B /* UITableView+LastVisible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		A01EA3DD24AD493200394A6E /* InjectDependenciesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectDependenciesProtocol.swift; sourceTree = "<group>"; };
 		A01EA3DF24AD58B100394A6E /* UIImageView+Downloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloading.swift"; sourceTree = "<group>"; };
 		A01EA3E124AD777000394A6E /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		A0DDBAAF24AE1B320054F79B /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		A0DDBAB124AE1BA40054F79B /* UITableView+LastVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+LastVisible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				A01EA3DD24AD493200394A6E /* InjectDependenciesProtocol.swift */,
 				A01EA3DF24AD58B100394A6E /* UIImageView+Downloading.swift */,
 				A01EA3E124AD777000394A6E /* UIViewController+NavigationBar.swift */,
+				A0DDBAAF24AE1B320054F79B /* Animator.swift */,
+				A0DDBAB124AE1BA40054F79B /* UITableView+LastVisible.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -345,9 +351,11 @@
 				A01EA3CE24AD3EDC00394A6E /* ApodTableViewCell.swift in Sources */,
 				A01EA3DE24AD493200394A6E /* InjectDependenciesProtocol.swift in Sources */,
 				A01EA3BE24AD301A00394A6E /* ApodList+DataSource.swift in Sources */,
+				A0DDBAB024AE1B320054F79B /* Animator.swift in Sources */,
 				A01EA39B24AD07CD00394A6E /* AppDelegate.swift in Sources */,
 				A01EA3D124AD3FCF00394A6E /* UIView+Bordered.swift in Sources */,
 				A01EA3B824AD250000394A6E /* Apod.swift in Sources */,
+				A0DDBAB224AE1BA40054F79B /* UITableView+LastVisible.swift in Sources */,
 				A01EA3B024AD1A8700394A6E /* ApodAPI.swift in Sources */,
 				A01EA3E024AD58B100394A6E /* UIImageView+Downloading.swift in Sources */,
 				A01EA3BC24AD2FCD00394A6E /* ApodList.swift in Sources */,
